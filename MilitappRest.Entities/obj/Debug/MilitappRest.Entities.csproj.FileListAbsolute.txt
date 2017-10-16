@@ -1,0 +1,5 @@
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Entities\bin\Debug\MilitappRest.Entities.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Entities\bin\Debug\MilitappRest.Entities.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Entities\obj\Debug\MilitappRest.Entities.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Entities\obj\Debug\MilitappRest.Entities.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Entities\obj\Debug\MilitappRest.Entities.csprojResolveAssemblyReference.cache

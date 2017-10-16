@@ -1,0 +1,13 @@
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Business.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Business.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Entities.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Interfaces.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Repositories.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\EntityFramework.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Entities.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Interfaces.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\MilitappRest.Repositories.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\bin\Release\EntityFramework.xml
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\obj\Release\MilitappRest.Business.csprojResolveAssemblyReference.cache
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\obj\Release\MilitappRest.Business.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Business\obj\Release\MilitappRest.Business.pdb

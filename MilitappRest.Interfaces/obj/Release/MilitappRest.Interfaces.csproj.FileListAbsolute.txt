@@ -1,0 +1,4 @@
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\bin\Release\MilitappRest.Interfaces.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\bin\Release\MilitappRest.Interfaces.pdb
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\obj\Release\MilitappRest.Interfaces.dll
+C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\obj\Release\MilitappRest.Interfaces.pdb

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MilitappBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MilitappBDConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbcandidato" EntityType="MilitappBDModel.tbcandidato" />
+    <EntitySet Name="tbcargo" EntityType="MilitappBDModel.tbcargo" />
+    <EntitySet Name="tbcomuna" EntityType="MilitappBDModel.tbcomuna" />
+    <EntitySet Name="tbeleccion" EntityType="MilitappBDModel.tbeleccion" />
+    <EntitySet Name="tbescuela" EntityType="MilitappBDModel.tbescuela" />
+    <EntitySet Name="tbfiscal" EntityType="MilitappBDModel.tbfiscal" />
+    <EntitySet Name="tblista" EntityType="MilitappBDModel.tblista" />
+    <EntitySet Name="tblistacandidatocargo" EntityType="MilitappBDModel.tblistacandidatocargo" />
+    <EntitySet Name="tblistacargo" EntityType="MilitappBDModel.tblistacargo" />
+    <EntitySet Name="tbmesa" EntityType="MilitappBDModel.tbmesa" />
+    <EntitySet Name="tbplanilla" EntityType="MilitappBDModel.tbplanilla" />
+    <EntitySet Name="tbplanillacargo" EntityType="MilitappBDModel.tbplanillacargo" />
+    <EntitySet Name="tbresultado" EntityType="MilitappBDModel.tbresultado" />
+    <EntitySet Name="tbsistema" EntityType="MilitappBDModel.tbsistema" />
+    <AssociationSet Name="fk_tbListaCandidatoCargo_tbCandidatos1" Association="MilitappBDModel.fk_tbListaCandidatoCargo_tbCandidatos1">
+      <End Role="tbcandidato" EntitySet="tbcandidato" />
+      <End Role="tblistacandidatocargo" EntitySet="tblistacandidatocargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbListaCargo_tbCargo1" Association="MilitappBDModel.fk_tbListaCargo_tbCargo1">
+      <End Role="tbcargo" EntitySet="tbcargo" />
+      <End Role="tblistacargo" EntitySet="tblistacargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanillaCargo_tbCargo1" Association="MilitappBDModel.fk_tbPlanillaCargo_tbCargo1">
+      <End Role="tbcargo" EntitySet="tbcargo" />
+      <End Role="tbplanillacargo" EntitySet="tbplanillacargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbEscuela_tbComuna1" Association="MilitappBDModel.fk_tbEscuela_tbComuna1">
+      <End Role="tbcomuna" EntitySet="tbcomuna" />
+      <End Role="tbescuela" EntitySet="tbescuela" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbListas_tbEleccion" Association="MilitappBDModel.fk_tbListas_tbEleccion">
+      <End Role="tbeleccion" EntitySet="tbeleccion" />
+      <End Role="tblista" EntitySet="tblista" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanilla_tbEleccion1" Association="MilitappBDModel.fk_tbPlanilla_tbEleccion1">
+      <End Role="tbeleccion" EntitySet="tbeleccion" />
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanilla_tbEscuela1" Association="MilitappBDModel.fk_tbPlanilla_tbEscuela1">
+      <End Role="tbescuela" EntitySet="tbescuela" />
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanilla_tbFiscales1" Association="MilitappBDModel.fk_tbPlanilla_tbFiscales1">
+      <End Role="tbfiscal" EntitySet="tbfiscal" />
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbListaCargo_tbLista1" Association="MilitappBDModel.fk_tbListaCargo_tbLista1">
+      <End Role="tblista" EntitySet="tblista" />
+      <End Role="tblistacargo" EntitySet="tblistacargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbListaCandidatoCargo_tbListaCargo1" Association="MilitappBDModel.fk_tbListaCandidatoCargo_tbListaCargo1">
+      <End Role="tblistacargo" EntitySet="tblistacargo" />
+      <End Role="tblistacandidatocargo" EntitySet="tblistacandidatocargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbResultado_tbListaCargo1" Association="MilitappBDModel.fk_tbResultado_tbListaCargo1">
+      <End Role="tblistacargo" EntitySet="tblistacargo" />
+      <End Role="tbresultado" EntitySet="tbresultado" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanilla_tbMesa1" Association="MilitappBDModel.fk_tbPlanilla_tbMesa1">
+      <End Role="tbmesa" EntitySet="tbmesa" />
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbPlanillaCargo_tbPlanilla1" Association="MilitappBDModel.fk_tbPlanillaCargo_tbPlanilla1">
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+      <End Role="tbplanillacargo" EntitySet="tbplanillacargo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbResultados_tbPlanilla1" Association="MilitappBDModel.fk_tbResultados_tbPlanilla1">
+      <End Role="tbplanilla" EntitySet="tbplanilla" />
+      <End Role="tbresultado" EntitySet="tbresultado" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbcandidato">
+    <Key>
+      <PropertyRef Name="can_id" />
+    </Key>
+    <Property Name="can_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="can_nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="can_apellido" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblistacandidatocargo" Relationship="MilitappBDModel.fk_tbListaCandidatoCargo_tbCandidatos1" FromRole="tbcandidato" ToRole="tblistacandidatocargo" />
+  </EntityType>
+  <EntityType Name="tbcargo">
+    <Key>
+      <PropertyRef Name="car_id" />
+    </Key>
+    <Property Name="car_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="car_descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblistacargo" Relationship="MilitappBDModel.fk_tbListaCargo_tbCargo1" FromRole="tbcargo" ToRole="tblistacargo" />
+    <NavigationProperty Name="tbplanillacargo" Relationship="MilitappBDModel.fk_tbPlanillaCargo_tbCargo1" FromRole="tbcargo" ToRole="tbplanillacargo" />
+  </EntityType>
+  <EntityType Name="tbcomuna">
+    <Key>
+      <PropertyRef Name="com_id" />
+    </Key>
+    <Property Name="com_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="com_descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbescuela" Relationship="MilitappBDModel.fk_tbEscuela_tbComuna1" FromRole="tbcomuna" ToRole="tbescuela" />
+  </EntityType>
+  <EntityType Name="tbeleccion">
+    <Key>
+      <PropertyRef Name="ele_fecha" />
+    </Key>
+    <Property Name="ele_fecha" Type="DateTime" Nullable="false" />
+    <Property Name="ele_descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tblista" Relationship="MilitappBDModel.fk_tbListas_tbEleccion" FromRole="tbeleccion" ToRole="tblista" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbPlanilla_tbEleccion1" FromRole="tbeleccion" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tbescuela">
+    <Key>
+      <PropertyRef Name="esc_id" />
+    </Key>
+    <Property Name="esc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="com_id" Type="Int32" Nullable="false" />
+    <Property Name="esc_nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="esc_direccion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbcomuna" Relationship="MilitappBDModel.fk_tbEscuela_tbComuna1" FromRole="tbescuela" ToRole="tbcomuna" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbPlanilla_tbEscuela1" FromRole="tbescuela" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tbfiscal">
+    <Key>
+      <PropertyRef Name="fis_id" />
+    </Key>
+    <Property Name="fis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fis_dni" Type="Int32" Nullable="false" />
+    <Property Name="fis_nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="fis_apellido" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbPlanilla_tbFiscales1" FromRole="tbfiscal" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tblista">
+    <Key>
+      <PropertyRef Name="lis_id" />
+    </Key>
+    <Property Name="lis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ele_fecha" Type="DateTime" Nullable="false" />
+    <Property Name="lis_numero" Type="Int32" Nullable="false" />
+    <Property Name="lis_letra" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="lis_descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbeleccion" Relationship="MilitappBDModel.fk_tbListas_tbEleccion" FromRole="tblista" ToRole="tbeleccion" />
+    <NavigationProperty Name="tblistacargo" Relationship="MilitappBDModel.fk_tbListaCargo_tbLista1" FromRole="tblista" ToRole="tblistacargo" />
+  </EntityType>
+  <EntityType Name="tblistacandidatocargo">
+    <Key>
+      <PropertyRef Name="lca_id" />
+      <PropertyRef Name="can_id" />
+    </Key>
+    <Property Name="lca_id" Type="Int32" Nullable="false" />
+    <Property Name="can_id" Type="Int32" Nullable="false" />
+    <Property Name="lcc_orden" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbcandidato" Relationship="MilitappBDModel.fk_tbListaCandidatoCargo_tbCandidatos1" FromRole="tblistacandidatocargo" ToRole="tbcandidato" />
+    <NavigationProperty Name="tblistacargo" Relationship="MilitappBDModel.fk_tbListaCandidatoCargo_tbListaCargo1" FromRole="tblistacandidatocargo" ToRole="tblistacargo" />
+  </EntityType>
+  <EntityType Name="tblistacargo">
+    <Key>
+      <PropertyRef Name="lca_id" />
+    </Key>
+    <Property Name="lca_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lis_id" Type="Int32" Nullable="false" />
+    <Property Name="car_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbcargo" Relationship="MilitappBDModel.fk_tbListaCargo_tbCargo1" FromRole="tblistacargo" ToRole="tbcargo" />
+    <NavigationProperty Name="tblista" Relationship="MilitappBDModel.fk_tbListaCargo_tbLista1" FromRole="tblistacargo" ToRole="tblista" />
+    <NavigationProperty Name="tblistacandidatocargo" Relationship="MilitappBDModel.fk_tbListaCandidatoCargo_tbListaCargo1" FromRole="tblistacargo" ToRole="tblistacandidatocargo" />
+    <NavigationProperty Name="tbresultado" Relationship="MilitappBDModel.fk_tbResultado_tbListaCargo1" FromRole="tblistacargo" ToRole="tbresultado" />
+  </EntityType>
+  <EntityType Name="tbmesa">
+    <Key>
+      <PropertyRef Name="mes_id" />
+    </Key>
+    <Property Name="mes_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mes_numero" Type="Int32" Nullable="false" />
+    <Property Name="mes_descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbPlanilla_tbMesa1" FromRole="tbmesa" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tbplanilla">
+    <Key>
+      <PropertyRef Name="pla_id" />
+    </Key>
+    <Property Name="pla_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ele_fecha" Type="DateTime" Nullable="false" />
+    <Property Name="esc_id" Type="Int32" Nullable="false" />
+    <Property Name="mes_id" Type="Int32" Nullable="false" />
+    <Property Name="fis_id" Type="Int32" Nullable="false" />
+    <Property Name="pla_apertura" Type="DateTime" />
+    <Property Name="pla_cierre" Type="DateTime" />
+    <Property Name="pla_electores" Type="Int32" />
+    <Property Name="pla_sobres" Type="Int32" />
+    <NavigationProperty Name="tbeleccion" Relationship="MilitappBDModel.fk_tbPlanilla_tbEleccion1" FromRole="tbplanilla" ToRole="tbeleccion" />
+    <NavigationProperty Name="tbescuela" Relationship="MilitappBDModel.fk_tbPlanilla_tbEscuela1" FromRole="tbplanilla" ToRole="tbescuela" />
+    <NavigationProperty Name="tbfiscal" Relationship="MilitappBDModel.fk_tbPlanilla_tbFiscales1" FromRole="tbplanilla" ToRole="tbfiscal" />
+    <NavigationProperty Name="tbmesa" Relationship="MilitappBDModel.fk_tbPlanilla_tbMesa1" FromRole="tbplanilla" ToRole="tbmesa" />
+    <NavigationProperty Name="tbplanillacargo" Relationship="MilitappBDModel.fk_tbPlanillaCargo_tbPlanilla1" FromRole="tbplanilla" ToRole="tbplanillacargo" />
+    <NavigationProperty Name="tbresultado" Relationship="MilitappBDModel.fk_tbResultados_tbPlanilla1" FromRole="tbplanilla" ToRole="tbresultado" />
+  </EntityType>
+  <EntityType Name="tbplanillacargo">
+    <Key>
+      <PropertyRef Name="pla_id" />
+      <PropertyRef Name="car_id" />
+    </Key>
+    <Property Name="pla_id" Type="Int32" Nullable="false" />
+    <Property Name="car_id" Type="Int32" Nullable="false" />
+    <Property Name="pca_cantidad_votos" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbcargo" Relationship="MilitappBDModel.fk_tbPlanillaCargo_tbCargo1" FromRole="tbplanillacargo" ToRole="tbcargo" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbPlanillaCargo_tbPlanilla1" FromRole="tbplanillacargo" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tbresultado">
+    <Key>
+      <PropertyRef Name="lca_id" />
+      <PropertyRef Name="pla_id" />
+    </Key>
+    <Property Name="lca_id" Type="Int32" Nullable="false" />
+    <Property Name="pla_id" Type="Int32" Nullable="false" />
+    <Property Name="res_cantidad_votos" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblistacargo" Relationship="MilitappBDModel.fk_tbResultado_tbListaCargo1" FromRole="tbresultado" ToRole="tblistacargo" />
+    <NavigationProperty Name="tbplanilla" Relationship="MilitappBDModel.fk_tbResultados_tbPlanilla1" FromRole="tbresultado" ToRole="tbplanilla" />
+  </EntityType>
+  <EntityType Name="tbsistema">
+    <Key>
+      <PropertyRef Name="sis_id" />
+    </Key>
+    <Property Name="sis_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sis_version" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="sis_descripcion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="fk_tbListaCandidatoCargo_tbCandidatos1">
+    <End Type="MilitappBDModel.tbcandidato" Role="tbcandidato" Multiplicity="1" />
+    <End Type="MilitappBDModel.tblistacandidatocargo" Role="tblistacandidatocargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcandidato">
+        <PropertyRef Name="can_id" />
+      </Principal>
+      <Dependent Role="tblistacandidatocargo">
+        <PropertyRef Name="can_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbListaCargo_tbCargo1">
+    <End Type="MilitappBDModel.tbcargo" Role="tbcargo" Multiplicity="1" />
+    <End Type="MilitappBDModel.tblistacargo" Role="tblistacargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcargo">
+        <PropertyRef Name="car_id" />
+      </Principal>
+      <Dependent Role="tblistacargo">
+        <PropertyRef Name="car_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanillaCargo_tbCargo1">
+    <End Type="MilitappBDModel.tbcargo" Role="tbcargo" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanillacargo" Role="tbplanillacargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcargo">
+        <PropertyRef Name="car_id" />
+      </Principal>
+      <Dependent Role="tbplanillacargo">
+        <PropertyRef Name="car_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbEscuela_tbComuna1">
+    <End Type="MilitappBDModel.tbcomuna" Role="tbcomuna" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbescuela" Role="tbescuela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcomuna">
+        <PropertyRef Name="com_id" />
+      </Principal>
+      <Dependent Role="tbescuela">
+        <PropertyRef Name="com_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbListas_tbEleccion">
+    <End Type="MilitappBDModel.tbeleccion" Role="tbeleccion" Multiplicity="1" />
+    <End Type="MilitappBDModel.tblista" Role="tblista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbeleccion">
+        <PropertyRef Name="ele_fecha" />
+      </Principal>
+      <Dependent Role="tblista">
+        <PropertyRef Name="ele_fecha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanilla_tbEleccion1">
+    <End Type="MilitappBDModel.tbeleccion" Role="tbeleccion" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbeleccion">
+        <PropertyRef Name="ele_fecha" />
+      </Principal>
+      <Dependent Role="tbplanilla">
+        <PropertyRef Name="ele_fecha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanilla_tbEscuela1">
+    <End Type="MilitappBDModel.tbescuela" Role="tbescuela" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbescuela">
+        <PropertyRef Name="esc_id" />
+      </Principal>
+      <Dependent Role="tbplanilla">
+        <PropertyRef Name="esc_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanilla_tbFiscales1">
+    <End Type="MilitappBDModel.tbfiscal" Role="tbfiscal" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbfiscal">
+        <PropertyRef Name="fis_id" />
+      </Principal>
+      <Dependent Role="tbplanilla">
+        <PropertyRef Name="fis_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbListaCargo_tbLista1">
+    <End Type="MilitappBDModel.tblista" Role="tblista" Multiplicity="1" />
+    <End Type="MilitappBDModel.tblistacargo" Role="tblistacargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblista">
+        <PropertyRef Name="lis_id" />
+      </Principal>
+      <Dependent Role="tblistacargo">
+        <PropertyRef Name="lis_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbListaCandidatoCargo_tbListaCargo1">
+    <End Type="MilitappBDModel.tblistacargo" Role="tblistacargo" Multiplicity="1" />
+    <End Type="MilitappBDModel.tblistacandidatocargo" Role="tblistacandidatocargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblistacargo">
+        <PropertyRef Name="lca_id" />
+      </Principal>
+      <Dependent Role="tblistacandidatocargo">
+        <PropertyRef Name="lca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbResultado_tbListaCargo1">
+    <End Type="MilitappBDModel.tblistacargo" Role="tblistacargo" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbresultado" Role="tbresultado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblistacargo">
+        <PropertyRef Name="lca_id" />
+      </Principal>
+      <Dependent Role="tbresultado">
+        <PropertyRef Name="lca_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanilla_tbMesa1">
+    <End Type="MilitappBDModel.tbmesa" Role="tbmesa" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbmesa">
+        <PropertyRef Name="mes_id" />
+      </Principal>
+      <Dependent Role="tbplanilla">
+        <PropertyRef Name="mes_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbPlanillaCargo_tbPlanilla1">
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbplanillacargo" Role="tbplanillacargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbplanilla">
+        <PropertyRef Name="pla_id" />
+      </Principal>
+      <Dependent Role="tbplanillacargo">
+        <PropertyRef Name="pla_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbResultados_tbPlanilla1">
+    <End Type="MilitappBDModel.tbplanilla" Role="tbplanilla" Multiplicity="1" />
+    <End Type="MilitappBDModel.tbresultado" Role="tbresultado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbplanilla">
+        <PropertyRef Name="pla_id" />
+      </Principal>
+      <Dependent Role="tbresultado">
+        <PropertyRef Name="pla_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

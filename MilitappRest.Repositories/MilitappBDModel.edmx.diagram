@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ee969f7cca740018f27fab44111bff7" Name="Diagram1">
+        <EntityTypeShape EntityType="MilitappBDModel.tbcandidato" Width="1.5" PointX="5.25" PointY="12.75" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbcargo" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbcomuna" Width="1.5" PointX="1.5" PointY="13.5" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbeleccion" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbescuela" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbfiscal" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="MilitappBDModel.tblista" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="MilitappBDModel.tblistacandidatocargo" Width="1.5" PointX="7.5" PointY="9.625" />
+        <EntityTypeShape EntityType="MilitappBDModel.tblistacargo" Width="1.5" PointX="5.25" PointY="9.5" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbmesa" Width="1.5" PointX="0.75" PointY="8.125" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbplanilla" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbplanillacargo" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbresultado" Width="1.5" PointX="7.5" PointY="6.875" />
+        <EntityTypeShape EntityType="MilitappBDModel.tbsistema" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbListaCandidatoCargo_tbCandidatos1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbListaCargo_tbCargo1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanillaCargo_tbCargo1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbEscuela_tbComuna1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbListas_tbEleccion" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanilla_tbEleccion1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanilla_tbEscuela1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanilla_tbFiscales1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbListaCargo_tbLista1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbListaCandidatoCargo_tbListaCargo1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbResultado_tbListaCargo1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanilla_tbMesa1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbPlanillaCargo_tbPlanilla1" />
+        <AssociationConnector Association="MilitappBDModel.fk_tbResultados_tbPlanilla1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
