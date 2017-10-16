@@ -15,6 +15,7 @@ namespace MilitappRest.Service.Controllers
         [HttpPost]
         public HttpResponseMessage EnviarPlanilla(PlanillaModel model)
         {
+            ResponseModel responseModel = new ResponseModel();
             try
             {
                 //Se almacena la cantidad de sobres
@@ -32,9 +33,13 @@ namespace MilitappRest.Service.Controllers
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+                responseModel.CodigoRespuesta = -1;
+                responseModel.DescripcionRespuesta = "[ERROR]: El registro ya se ingreso.";
+                //return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+                return Request.CreateResponse(HttpStatusCode.OK, responseModel);
             }
-            return Request.CreateResponse(HttpStatusCode.OK);
+            responseModel.DescripcionRespuesta = "El registro se ingreso correctamente.";
+            return Request.CreateResponse(HttpStatusCode.OK, responseModel);
         }
 
         [HttpPut]

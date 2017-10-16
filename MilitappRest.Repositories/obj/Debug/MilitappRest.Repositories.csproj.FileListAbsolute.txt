@@ -10,3 +10,15 @@ C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRe
 C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.csprojResolveAssemblyReference.cache
 C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.dll
 C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.pdb
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Repositories.dll.config
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Repositories.dll
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Repositories.pdb
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\EntityFramework.dll
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Entities.dll
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Interfaces.dll
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Entities.pdb
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\MilitappRest.Interfaces.pdb
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\bin\Debug\EntityFramework.xml
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.csprojResolveAssemblyReference.cache
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.dll
+C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Repositories\obj\Debug\MilitappRest.Repositories.pdb
