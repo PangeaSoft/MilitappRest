@@ -91,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tbfiscal.cs" />
     <Compile Include="tblistacandidatocargo.cs" />
+    <Compile Include="tblistacargo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

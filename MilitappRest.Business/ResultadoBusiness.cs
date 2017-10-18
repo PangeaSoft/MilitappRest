@@ -25,33 +25,48 @@ namespace MilitappRest.Business
                 resultadoRepository.Create(obj);
         }
 
-        public Dictionary<int, int> ObtenerVotosPorLista(int cantidadSobres, int[] idListaCandidatos)
+        public List<tblistacargo> ObtenerVotosPorLista(int cantidadSobres, int[] idListaCandidatos)
         {
-            Dictionary<int, int> resultados = new Dictionary<int, int>();
+            List<tblistacargo> resultados = new List<tblistacargo>();
+            tblistacargo listaCargo = null;
             int votosDominioLista = 0;
 
             foreach (int codigoListaCandidato in idListaCandidatos)
             {
                 int votos = this.ResultadosListaCargo(codigoListaCandidato);
                 votosDominioLista += votos;
-                resultados.Add(codigoListaCandidato, votos);
+
+                listaCargo = new tblistacargo()
+                {
+                    lca_id = codigoListaCandidato,
+                    lca_cantidad_votos = votos
+                };
+
+                resultados.Add(listaCargo);
             }
             int diferenciaVotosDominio = cantidadSobres - votosDominioLista;
-            resultados.Add(99, diferenciaVotosDominio);
+            resultados.Add(new tblistacargo() 
+            { 
+                lca_id = 99, 
+                lca_cantidad_votos = diferenciaVotosDominio 
+            });
+            
 
             return resultados;
         }
 
-        public Dictionary<int, double> ObtenerPorcentajesPorLista(int cantidadSobres, Dictionary<int, int> cantidadVotosLista)
+        public List<tblistacargo> ObtenerPorcentajesPorLista(int cantidadSobres, List<tblistacargo> cantidadVotosLista)
         {
-            Dictionary<int, double> resultados = new Dictionary<int, double>();
+            List<tblistacargo> resultados = new List<tblistacargo>();
+            tblistacargo r = null;
 
             foreach (var obj in cantidadVotosLista)
             {
-                int votos = obj.Value;
-                double porcentajeVotos = (double)(votos * 100) / cantidadSobres;
+                r = new tblistacargo();
+                r.lca_id = obj.lca_id;
+                r.lca_porcentaje_votos = (double)(obj.lca_cantidad_votos * 100) / cantidadSobres;
 
-                resultados.Add(obj.Key, porcentajeVotos);
+                resultados.Add(r);
             }
 
             return resultados;

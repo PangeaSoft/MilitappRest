@@ -10,43 +10,43 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="bin/MilitappRest.Business.dll">
-      <publishTime>10/16/2017 15:11:11</publishTime>
+      <publishTime>10/18/2017 09:28:42</publishTime>
     </File>
     <File Include="bin/MilitappRest.Entities.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/18/2017 09:28:35</publishTime>
     </File>
     <File Include="bin/MilitappRest.Interfaces.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/18/2017 09:28:36</publishTime>
     </File>
     <File Include="bin/MilitappRest.Repositories.dll">
-      <publishTime>10/16/2017 15:11:10</publishTime>
+      <publishTime>10/18/2017 09:28:41</publishTime>
     </File>
     <File Include="bin/MilitappRest.Service.dll">
-      <publishTime>10/16/2017 15:42:54</publishTime>
+      <publishTime>10/18/2017 09:28:45</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>10/16/2017 14:13:30</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/16/2017 15:42:54</publishTime>
+      <publishTime>10/17/2017 10:12:41</publishTime>
     </File>
   </ItemGroup>
 </Project>
