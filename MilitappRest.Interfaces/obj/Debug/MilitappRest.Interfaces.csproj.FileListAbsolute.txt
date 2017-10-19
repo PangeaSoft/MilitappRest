@@ -1,8 +1,0 @@
-C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\bin\Debug\MilitappRest.Interfaces.dll
-C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\bin\Debug\MilitappRest.Interfaces.pdb
-C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\obj\Debug\MilitappRest.Interfaces.dll
-C:\Users\leona_000\Documents\Visual Studio 2013\Projects\MilitappRest\MilitappRest.Interfaces\obj\Debug\MilitappRest.Interfaces.pdb
-C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Interfaces\bin\Debug\MilitappRest.Interfaces.dll
-C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Interfaces\bin\Debug\MilitappRest.Interfaces.pdb
-C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Interfaces\obj\Debug\MilitappRest.Interfaces.dll
-C:\Leo\ProyectosGit\MilitappRest\MilitappRest.Interfaces\obj\Debug\MilitappRest.Interfaces.pdb
