@@ -43,6 +43,18 @@ namespace MilitappRest.Business
             this.Update(original);
         }
 
+        public void ReiniciarPlanilla(tbplanilla planilla)
+        {
+            var original = this.GetElement(planilla) as tbplanilla;
+
+            original.pla_apertura = null;
+            original.pla_cierre = null;
+            original.pla_electores = null;
+            original.pla_sobres = 0;
+            
+            this.Update(original);
+        }
+
         public void CargarCantidadSobresElectores(tbplanilla planilla)
         {
             var original = this.GetElement(planilla)as tbplanilla;
@@ -81,7 +93,14 @@ namespace MilitappRest.Business
     
             return planillas;
         }
-        
+
+        public object ObtenerPlanillasAbiertasCerradas()
+        {
+            Func<tbplanilla, bool> funcion = x => x.pla_apertura != null || x.pla_cierre != null;
+            List<tbplanilla> planillas = this.GetList(funcion) as List<tbplanilla>;
+            return planillas;
+        }
+
         public void Update(tbplanilla entity)
         {
             planillaRepository.Update(entity);

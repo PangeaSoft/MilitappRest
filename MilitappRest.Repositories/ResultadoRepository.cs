@@ -45,7 +45,19 @@ namespace MilitappRest.Repositories
 
         public void Delete(tbresultado entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<tbresultado> removeElements =
+                    cnx.tbresultado.Where(x => x.pla_id == entity.pla_id).ToList();
+                foreach (var obj in removeElements)
+                    cnx.tbresultado.Remove(obj);
+
+                cnx.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public object GetElement(tbresultado entity)

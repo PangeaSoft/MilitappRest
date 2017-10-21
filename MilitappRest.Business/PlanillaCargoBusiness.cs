@@ -39,6 +39,11 @@ namespace MilitappRest.Business
             planillaCargoRepository.Create(entity);
         }
 
+        public void Delete(tbplanillacargo entity)
+        {
+            planillaCargoRepository.Delete(entity);
+        }
+
         public object GetList(Func<tbplanillacargo, bool> funcion)
         {
             return planillaCargoRepository.GetList(funcion);

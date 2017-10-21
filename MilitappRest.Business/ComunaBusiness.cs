@@ -18,6 +18,18 @@ namespace MilitappRest.Business
 
         public object ObtenerEscuelasPorComuna()
         {
+            List<tbcomuna> listaComunas = new List<tbcomuna>();
+
+            PlanillaBusiness bizPlanilla = new PlanillaBusiness();
+            Func<tbplanilla, bool> funcion = x => x.pla_sobres > 0;
+            List<tbplanilla> planillas = bizPlanilla.GetList(funcion) as List<tbplanilla>;
+
+            return listaComunas;
+        }
+
+        //FORMA CORRECTA, NO DESCARTAR
+        public object ObtenerEscuelasPorComunaOLD()
+        {
             //Traigo todas las comunas 
             ComunaBusiness comunaBusiness = new ComunaBusiness();
             List<tbcomuna> listaComunas = new List<tbcomuna>();
@@ -32,16 +44,16 @@ namespace MilitappRest.Business
             List<tbescuela> listaEscuelas = new List<tbescuela>();
             EscuelaBusiness escuelaBusiness = new EscuelaBusiness();
 
-            foreach(var planilla in listaPlanillas)
+            foreach (var planilla in listaPlanillas)
             {
                 planilla.tbescuela = new tbescuela();
                 planilla.tbescuela = escuelaBusiness.GetElement(new tbescuela() { esc_id = planilla.esc_id }) as tbescuela;
             }
 
             //Cargo a las comunas sus planillas correspondientes
-            foreach(var p in listaPlanillas)
+            foreach (var p in listaPlanillas)
             {
-                
+
             }
 
             return listaPlanillas;

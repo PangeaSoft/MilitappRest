@@ -72,13 +72,46 @@ namespace MilitappRest.Service.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        [HttpGet]
-        public tbplanilla ObtenerPlanilla(int id)
+        [HttpPut]
+        public HttpResponseMessage EliminarPlanilla(tbplanilla entity)
         {
-            tbplanilla planilla = new tbplanilla() { pla_id = id };
-            PlanillaBusiness biz = new PlanillaBusiness();
+            try
+            {
+                //Se reinician valores de la planilla
+                PlanillaBusiness biz = new PlanillaBusiness();
+                biz.ReiniciarPlanilla(entity);
 
-            return biz.GetElement(planilla) as tbplanilla;
+                //Se eliminan los resultados
+                tbresultado resultado = new tbresultado() { pla_id = entity.pla_id };
+                ResultadoBusiness bizResultados = new ResultadoBusiness();
+                bizResultados.Delete(resultado);
+
+                //Se eliminan planilla cargo con los votos cargados
+                tbplanillacargo planillaCargo = new tbplanillacargo() { pla_id = entity.pla_id };
+                PlanillaCargoBusiness bizPlanillaCargo = new PlanillaCargoBusiness();
+                bizPlanillaCargo.Delete(planillaCargo);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage ObtenerPlanillasAbiertasCerradas()
+        {
+            List<tbplanilla> planillas = new List<tbplanilla>();
+            try
+            {
+                PlanillaBusiness biz = new PlanillaBusiness();
+                planillas = biz.ObtenerPlanillasAbiertasCerradas() as List<tbplanilla>;
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, planillas);
         }
     }
 }

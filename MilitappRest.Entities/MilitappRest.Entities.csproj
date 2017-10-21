@@ -89,6 +89,7 @@
       <DependentUpon>MilitappBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbcomuna.cs" />
     <Compile Include="tbfiscal.cs" />
     <Compile Include="tblistacandidatocargo.cs" />
     <Compile Include="tblistacargo.cs" />

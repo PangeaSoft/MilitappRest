@@ -11,6 +11,22 @@ namespace MilitappRest.Service.Controllers
 {
     public class ComunaController : ApiController
     {
+        [HttpGet]
+        public HttpResponseMessage ObtenerCantidadPlanillasPorComuna()
+        {
+            List<tbcomuna> model = new List<tbcomuna>();
+            try
+            {
+                ComunaBusiness biz = new ComunaBusiness();
+                model = biz.ObtenerEscuelasPorComuna() as List<tbcomuna>;
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, model);
+        }
+
         [HttpPost]
         public void Create(tbcomuna comuna)
         {

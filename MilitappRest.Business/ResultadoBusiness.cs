@@ -196,6 +196,11 @@ namespace MilitappRest.Business
         }
         #endregion
 
+        public void Delete(tbresultado entity)
+        {
+            resultadoRepository.Delete(entity);
+        }
+
         public object GetList(Func<tbresultado, bool> funcion)
         {
             return resultadoRepository.GetList(funcion);
