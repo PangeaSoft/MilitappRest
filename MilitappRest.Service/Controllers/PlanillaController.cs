@@ -13,7 +13,7 @@ namespace MilitappRest.Service.Controllers
     public class PlanillaController : ApiController
     {
         [HttpPost]
-        public HttpResponseMessage EnviarPlanilla(PlanillaModel model)
+        public HttpResponseMessage EnviarPlanilla2(PlanillaModel model)
         {
             ResponseModel responseModel = new ResponseModel();
             try
@@ -43,7 +43,7 @@ namespace MilitappRest.Service.Controllers
         }
 
         [HttpPut]
-        public HttpResponseMessage AbrirPlanilla(tbplanilla entity)
+        public HttpResponseMessage AbrirPlanilla2(tbplanilla entity)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace MilitappRest.Service.Controllers
         }
 
         [HttpPut]
-        public HttpResponseMessage CerrarPlanilla(tbplanilla entity)
+        public HttpResponseMessage CerrarPlanilla2(tbplanilla entity)
         {
             try
             {
